@@ -8,8 +8,26 @@ git status //查看状态
 
 git diff  //查看修改详情
 
-git add readme.txt	//缓存什么概念？
+git add readme.txt	//提交到暂存区stage
 
-git commit -m "first commit" //提交到本地缓存
+git commit -m "first commit" //提交到master分支
 
-update11
+git log //查看commit历史
+
+git reset --hard HEAD //当前版本
+
+git reset --hard HEAD^ //HEAD^ 回退到上一版本
+
+git reset --hard HEAD~100 //HEAD^ 回退到上100个版本
+
+/d/work/gitRepo/trGitInAction	//工作区（Working Directory）
+	.git 						//隐藏目录，而是Git的版本库。
+	.git/refs/heads				//master分支，git commit 
+	.git/refs/tags				
+	
+	
+git checkout -- readme.txt //让这个文件回到最近一次git commit或git add时的状态
+	//git checkout -- file命令中的--很重要，没有--，就变成了“切换到另一个分支”的命令，
+	
+	addd333
+	
