@@ -21,13 +21,33 @@ git reset --hard HEAD^ //HEAD^ 回退到上一版本
 git reset --hard HEAD~100 //HEAD^ 回退到上100个版本
 
 /d/work/gitRepo/trGitInAction	//工作区（Working Directory）
-	.git 						//隐藏目录，而是Git的版本库。
+	.git 						//隐藏目录，而是Git的版本库(包含暂存区stage+本地仓库master分支)。
 	.git/refs/heads				//master分支，git commit 
 	.git/refs/tags				
 	
 	
-git checkout -- readme.txt //让这个文件回到最近一次git commit或git add时的状态
+git checkout -- readme.txt //让这个文件回到最近一次git commit或git add时的状态（使用版本库覆盖工作区）
 	//git checkout -- file命令中的--很重要，没有--，就变成了“切换到另一个分支”的命令，
 	
-	addd333
-	
+
+git reset HEAD readme.txt 	//把暂存区的修改回退到工作区。之后可以1，add添加到工作区；2，checkout放弃工作区的修改。
+
+
+rm test.txt //删除工作区
+git rm test.txt git commit test.txt //从版本库中删除该文件,
+
+
+远程仓库-----------------
+在github上创建一个新的仓库
+$ git remote add origin https://github.com/tmriver/trGitInAction.git	//添加远程库
+$ git push -u origin master
+git clone 	//从远程库克隆
+
+
+分支管理-----------------为了并行开发，一个分支一个时间线。
+创建分支只是创建一个指针
+
+
+git checkout -b dev //创建并切换到dev分支。相当于git branch dev;  git checkout dev
+git branch			//查看所有分支
+git checkout master	//切换分支
