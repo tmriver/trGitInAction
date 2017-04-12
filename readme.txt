@@ -12,4 +12,4 @@ git add readme.txt	//缓存什么概念？
 
 git commit -m "first commit" //提交到本地缓存
 
-
+update11
