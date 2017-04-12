@@ -59,5 +59,3 @@ Git鼓励你使用分支完成某个任务，合并后再删掉分支，这和�
 
 
 branch test 11
-
-branch test 22
