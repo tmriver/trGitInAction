@@ -22,7 +22,8 @@ git reset --hard HEAD~100 //HEAD^ 回退到上100个版本
 
 /d/work/gitRepo/trGitInAction	//工作区（Working Directory）
 	.git 						//隐藏目录，而是Git的版本库(包含暂存区stage+本地仓库master分支)。
-	.git/refs/heads				//master分支，git commit 
+	.git/refs/heads/master		//master分支，git commit 
+	.git/refs/heads/dev			//dev分支，git commit 
 	.git/refs/tags				
 	
 	
@@ -50,7 +51,7 @@ git clone 	//从远程库克隆
 
 git checkout -b dev //创建并切换到dev分支。相当于git branch dev;  git checkout dev
 git branch			//查看所有分支
-git checkout master	//切换分支
+git checkout master	//切换分支，未add的代码不变。
 
 git merge dev		//合并指定分支dev到当前分支。
 	Fast-forward//表示这次合并是“快进模式”，也就是直接把master指向dev的当前提交，不是每次都能快进模式
@@ -58,7 +59,7 @@ $ git branch -d dev	//删除dev。
 Git鼓励你使用分支完成某个任务，合并后再删掉分支，这和直接在master分支上工作效果是一样的，但过程更安全。	
 
 
-branch test 11
+解决冲突
 
-test333
 
+f111
