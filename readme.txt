@@ -60,9 +60,18 @@ Git鼓励你使用分支完成某个任务，合并后再删掉分支，这和�
 
 
 解决冲突
+git checkout -b feature1 	//创建新分支
+add & commit readme.txt		//commit, log:f1
+git checkout master			//切回master
+add & commit readme.txt		//commit, log:m1
+git merge feature1			//合并代码，显示冲突。Git用<<<<<<<，=======，>>>>>>>标记出不同分支的内容
+编辑readme.txt				//commit, log:m2
+重新add & commit readme.txt 
+git log						//log依次为：m2,m1,f1... 合并成功
+git log --graph				//合并路线图
 
 
+f2222
 
-
-master11
+f2111
 
