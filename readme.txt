@@ -64,11 +64,15 @@ git checkout -b feature1 	//创建新分支
 add & commit readme.txt		//commit, log:f1
 git checkout master			//切回master
 add & commit readme.txt		//commit, log:m1
-git merge feature1			//合并代码，显示冲突。Git用<<<<<<<，=======，>>>>>>>标记出不同分支的内容
-编辑readme.txt				//commit, log:m2
-重新add & commit readme.txt 
+git merge feature1			//合并代码，如果有冲突。Git用<<<<<<<，=======，>>>>>>>标记出不同分支的内容
+编辑readme.txt				
+重新add & commit readme.txt //commit, log:m2	
 git log						//log依次为：m2,m1,f1... 合并成功
 git log --graph				//合并路线图
 
 
+<<<<<<< HEAD
 m33
+=======
+f333
+>>>>>>> f3
