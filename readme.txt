@@ -96,3 +96,11 @@ git tag 		//查看tag-list，按照字母排序
 git show <tagname>	//查看tag详细
 git tag -d v1.0.0		//删除
 git push origin v1.0.0	//推送tag到远程
+
+
+fork
+主分支-远程仓库
+本地分支-本地仓库。
+git merge
+http://www.cnblogs.com/chucklu/p/4056373.html
+
