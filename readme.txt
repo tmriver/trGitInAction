@@ -80,5 +80,19 @@ f333
 
 保护工作区代码----------既不能add，又要切换分支
 git stash					//
+git stash list
 
 
+多人协作
+git remote -v	//
+origin  https://github.com/tmriver/trGitInAction.git (fetch) 	//pull权限
+origin  https://github.com/tmriver/trGitInAction.git (push)		//push权限
+
+
+标签
+tag是版本库的快照，便于发布和查找，指向某个commit的指针（分支是线可以前后移动，标签是点不能移动）
+git tag v1.0.0	//添加tag，默认是当前commit，也可以指定commitId
+git tag 		//查看tag-list，按照字母排序
+git show <tagname>	//查看tag详细
+git tag -d v1.0.0		//删除
+git push origin v1.0.0	//推送tag到远程
