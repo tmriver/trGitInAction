@@ -65,7 +65,7 @@ add & commit readme.txt		//commit, log:f1
 git checkout master			//切回master
 add & commit readme.txt		//commit, log:m1
 git merge feature1			//合并代码，如果有冲突。Git用<<<<<<<，=======，>>>>>>>标记出不同分支的内容
-编辑readme.txt				
+编辑readme.txt				//可选的。即使冲突了也可以不编辑（不区分冲突与否）
 重新add & commit readme.txt //commit, log:m2	
 git log						//log依次为：m2,m1,f1... 合并成功
 git log --graph				//合并路线图
@@ -76,3 +76,9 @@ m33
 =======
 f333
 >>>>>>> f3
+
+
+保护工作区代码----------既不能add，又要切换分支
+git stash					//
+
+
