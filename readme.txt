@@ -108,3 +108,11 @@ fork
 git merge
 http://www.cnblogs.com/chucklu/p/4056373.html
 
+关联多个git(私有git+github)
+代码来源(方便以后跟随官网升级，体会到git比svn开放强大，花费了周末和周一，学习让人快乐)：
+git clone https://github.com/alibaba/otter.git
+cd otter/
+git tag
+git checkout -b dev4213 otter-4.2.13
+git remote add dev http://xxx/yyy/otter.git
+git push -u dev dev4213
